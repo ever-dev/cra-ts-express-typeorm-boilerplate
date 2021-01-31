@@ -1,0 +1,32 @@
+{
+  "name": "cra-ts-express-typeorm-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for Full Stack Web application using Create-React-App, Express, TypeScript, and TypeORM",
+  "keywords": [
+    "boilerplate",
+    "CRA",
+    "Create-React-App",
+    "Express",
+    "TypeScript",
+    "TypeORM",
+    "MERN"
+  ],
+  "author": "ever-dev",
+  "license": "ISC",
+  "scripts": {
+    "postinstall": "npm install && npm install --prefix ./client && npm install --prefix ./server",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "start:prod": "cd server && npm run start",
+    "clean:client": "cd client && rm -rf ./dist",
+    "clean:server": "cd server && rm -rf ./build",
+    "clean": "clean client && clean server",
+    "start:server": "cd server && npm run dev",
+    "start:client": "cd client && npm start",
+    "start:dev": "concurrently 'npm run start-server-dev' 'npm run start-client-dev'"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  }
+}
